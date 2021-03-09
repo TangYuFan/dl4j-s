@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>图片内容识别</title>
+</head>
+<body>
+    <script th:src="@{/jquery/jquery-1.12.3.min.js}" ></script>
+    <form id="uploadForm" method="post" enctype="multipart/form-data" th:action="@{/recognize}" >
+    <table>
+        <tbody>
+            <tr>
+                <td>步骤一：</td>
+                <td>
+                    <input id="iptImage" name="image" type="file" accept="image/*" />
+                </td>
+            </tr>
+            <tr>
+                <td>步骤二：</td>
+                <td>
+                    <input id="iptSubmit" type="submit" value="上传并识别" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+    <hr/>
+    <div id="resultDiv">
+    </div>
+    <script th:src="@{/js/index.js}" ></script>
+</body>
+</html>
